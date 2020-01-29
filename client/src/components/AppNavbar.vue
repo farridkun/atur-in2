@@ -1,6 +1,5 @@
 <template>
-  <v-toolbar
-    app>
+  <v-toolbar app>
     <v-toolbar-title>
       <v-btn flat :to="{ name: 'home' }">Atur-in</v-btn>
     </v-toolbar-title>
@@ -10,6 +9,7 @@
       <v-btn flat :to="{ name: 'signup' }">SignUp</v-btn>
     </v-toolbar-items>
     <v-toolbar-items v-if="user">
+      !
       <app-avatar :user="user.user"></app-avatar>
       <v-btn flat @click="logout">LogOut</v-btn>
     </v-toolbar-items>
@@ -17,13 +17,13 @@
 </template>
 
 <script>
-import AppAvatar from '@/components/AppAvatar';
+import AppAvatar from "@/components/AppAvatar";
 
 export default {
-  props: ['user', 'logout'],
+  props: ["user", "logout"],
   components: {
-    AppAvatar,
-  },
+    AppAvatar
+  }
 };
 </script>
 

@@ -17,7 +17,7 @@
             required
           ></v-text-field>
           <v-btn type="submit" :disabled="!valid" color="warning">Login</v-btn>
-          <v-btn color="warning" @click="resetValidation">Reset Validation</v-btn>
+          <v-btn color="warning" @click="resetValidation">Reset</v-btn>
         </v-form>
         <v-progress-circular v-if="loading" :size="70" :width="7" indeterminate color="primary"></v-progress-circular>
       </v-layout>

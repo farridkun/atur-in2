@@ -1,4 +1,4 @@
-<template>
+<template class="yellow">
   <v-toolbar app>
     <v-toolbar-title>
       <v-btn flat :to="{ name: 'home' }">Atur-in</v-btn>
@@ -9,7 +9,6 @@
       <v-btn flat :to="{ name: 'signup' }">SignUp</v-btn>
     </v-toolbar-items>
     <v-toolbar-items v-if="user">
-      !
       <app-avatar :user="user.user"></app-avatar>
       <v-btn flat @click="logout">LogOut</v-btn>
     </v-toolbar-items>

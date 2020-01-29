@@ -1,4 +1,4 @@
-<template class="yellow">
+<template>
   <v-toolbar app>
     <v-toolbar-title>
       <v-btn flat :to="{ name: 'home' }">Atur-in</v-btn>

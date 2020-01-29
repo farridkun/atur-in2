@@ -16,7 +16,7 @@
             type="password"
             required
           ></v-text-field>
-          <v-btn type="submit" :disabled="!valid">Login</v-btn>
+          <v-btn type="submit" :disabled="!valid" color="warning">Login</v-btn>
         </v-form>
         <v-progress-circular v-if="loading" :size="70" :width="7" indeterminate color="primary"></v-progress-circular>
       </v-layout>

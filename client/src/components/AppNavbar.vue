@@ -2,7 +2,7 @@
   <v-toolbar app>
     <v-toolbar-title>
       <!-- <v-btn flat :to="{ name: 'home' }">Atur-in</v-btn> -->
-      <v-img src="@/assets/logo_a.jpg" max-width="120" max-height="120"></v-img>
+      <v-img src="../assets/logo_a.jpg" max-width="120" max-height="120"></v-img>
     </v-toolbar-title>
     <v-spacer></v-spacer>
     <v-toolbar-items v-if="!user">

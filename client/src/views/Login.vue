@@ -2,33 +2,22 @@
   <v-container fluid>
     <v-slide-y-transition mode="out-in">
       <v-layout column align-center>
-        <v-hover>
-          <template v-slot="{ hover }">
-            <v-card :elevation="hover ? 24 : 6" class="mx-auto pa-6">
-              <v-form
-                v-if="!loading"
-                v-model="valid"
-                @submit.prevent="login({ valid, user })"
-                @keydown.prevent.enter
-              >
-                <v-text-field
-                  v-model="user.username"
-                  :rules="notEmptyRules"
-                  label="Username"
-                  required
-                ></v-text-field>
-                <v-text-field
-                  v-model="user.password"
-                  :rules="notEmptyRules"
-                  label="Password"
-                  type="password"
-                  required
-                ></v-text-field>
-                <v-btn type="submit" :disabled="!valid">Login</v-btn>
-              </v-form>
-            </v-card>
-          </template>
-        </v-hover>
+        <v-form
+          v-if="!loading"
+          v-model="valid"
+          @submit.prevent="login({ valid, user })"
+          @keydown.prevent.enter
+        >
+          <v-text-field v-model="user.username" :rules="notEmptyRules" label="Username" required></v-text-field>
+          <v-text-field
+            v-model="user.password"
+            :rules="notEmptyRules"
+            label="Password"
+            type="password"
+            required
+          ></v-text-field>
+          <v-btn type="submit" :disabled="!valid">Login</v-btn>
+        </v-form>
         <v-progress-circular v-if="loading" :size="70" :width="7" indeterminate color="primary"></v-progress-circular>
       </v-layout>
     </v-slide-y-transition>

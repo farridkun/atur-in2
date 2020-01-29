@@ -2,6 +2,7 @@
   <v-container fluid>
     <v-slide-y-transition mode="out-in">
       <v-layout column align-center>
+        <v-img src="http://databiasa.mediabebas.id/logo.jpg" max-width="180" max-height="60"></v-img>
         <v-form
           v-if="!loading"
           v-model="valid"

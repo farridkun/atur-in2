@@ -1,40 +1,37 @@
 <template>
   <v-app>
-    <app-navbar
-      :user="user"
-      :logout="logout"
-      ></app-navbar>
+    <app-navbar :user="user" :logout="logout"></app-navbar>
     <v-content>
-      <router-view/>
+      <router-view />
     </v-content>
     <v-footer :fixed="fixed" app>
-      <span>&copy; 2020 - Made with 💙 by UHA-Developer</span>
+      <span align="center" justify="center">&copy; 2020 - Made with 💙 by UHA-Developer</span>
     </v-footer>
   </v-app>
 </template>
 
 <script>
-import { mapActions, mapState } from 'vuex';
-import AppNavbar from '@/components/AppNavbar';
+import { mapActions, mapState } from "vuex";
+import AppNavbar from "@/components/AppNavbar";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    AppNavbar,
+    AppNavbar
   },
   data() {
     return {
-      fixed: false,
+      fixed: false
     };
   },
   computed: {
-    ...mapState('auth', { user: 'payload' }),
+    ...mapState("auth", { user: "payload" })
   },
   methods: {
-    ...mapActions('auth', { authLogout: 'logout' }),
+    ...mapActions("auth", { authLogout: "logout" }),
     logout() {
-      this.authLogout().then(() => this.$router.push('/login'));
-    },
-  },
+      this.authLogout().then(() => this.$router.push("/login"));
+    }
+  }
 };
 </script>

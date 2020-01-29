@@ -44,6 +44,12 @@ export default {
   },
   methods: {
     ...mapActions("localAuth", ["login"])
+  },
+  reset() {
+    this.$refs.form.reset();
+  },
+  resetValidation() {
+    this.$refs.form.resetValidation();
   }
 };
 </script>

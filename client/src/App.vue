@@ -8,7 +8,7 @@
       <router-view/>
     </v-content>
     <v-footer :fixed="fixed" app>
-      <span>&copy; 2018 - Made with 💙 by CJ</span>
+      <span>&copy; 2020 - Made with 💙 by UHA-Developer</span>
     </v-footer>
   </v-app>
 </template>

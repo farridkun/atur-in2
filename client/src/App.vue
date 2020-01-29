@@ -5,7 +5,9 @@
       <router-view />
     </v-content>
     <v-footer :fixed="fixed" app>
-      <span align="center" justify="center">&copy; 2020 - Made with 💙 by UHA-Developer</span>
+      <v-layout column align-center>
+        <span align="center" justify="center">&copy; 2020 - Made with 💙 by UHA-Developer</span>
+      </v-layout>
     </v-footer>
   </v-app>
 </template>
